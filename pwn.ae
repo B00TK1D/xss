@@ -1,0 +1,12 @@
+DC"></svg><b>test</b><svg>
+D+
+
+
+<base href="/x/;alert(1)//">
+
+
+Object.prototype.toString = () => "test"; // pollute Object toString
+console.log(`${{}}`); // outputs: test
+console.log(`${document.body}`); // outputs: test
+document.write("<img name=cookie />"); // clobbers document.cookie with an image tag
+console.log(`${document.cookie}`); // outputs: test
